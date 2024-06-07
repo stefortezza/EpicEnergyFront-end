@@ -8,8 +8,6 @@ body {
 form {
     background: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-label {
@@ -80,4 +78,8 @@ form {
 
 .is-invalid:focus {
     box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+
+#btnSubmit {
+margin-left: 760px;
 }

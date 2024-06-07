@@ -1,158 +1,184 @@
-<form class="row g-3">
-    <div class="col-md-4">
-        <label for="validationServer01" class="form-label">First name</label>
-        <input type="text" class="form-control is-valid" id="validationServer01" required>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+<form
+  #inviaClientrForm="ngForm"
+  (ngSubmit)="inviaCliente(inviaClientrForm)"
+  class="row g-3"
+>
+  <div class="col-md-4">
+    <label for="validationServerSocietyName" class="form-label"
+      >Society Name</label
+    >
+    <input
+      type="text"
+      class="form-control is-invalid"
+      id="validationServerSocietyName"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid society name.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerClientType" class="form-label"
+      >Client Type</label
+    >
+    <select
+      class="form-select is-invalid"
+      id="validationServerClientType"
+      aria-describedby="validationServerClientTypeFeedback"
+      required
+    >
+      <option selected disabled value="">Choose...</option>
+      <option value="PA">PA</option>
+      <option value="SA">SA</option>
+      <option value="SPA">SPA</option>
+      <option value="SRL">SRL</option>
+    </select>
+    <div id="validationServerClientTypeFeedback" class="invalid-feedback">
+      Please select a valid client type.
     </div>
-    <div class="col-md-4">
-        <label for="validationServer02" class="form-label">Last name</label>
-        <input type="text" class="form-control is-valid" id="validationServer02" required>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerVat" class="form-label">VAT</label>
+    <input
+      type="text"
+      class="form-control is-invalid"
+      id="validationServerVat"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid VAT number.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerEmail" class="form-label">Email</label>
+    <input
+      type="email"
+      class="form-control is-invalid"
+      id="validationServerEmail"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid email.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerAddDate" class="form-label">Add Date</label>
+    <input
+      type="date"
+      class="form-control is-invalid"
+      id="validationServerAddDate"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid date.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerLastContact" class="form-label"
+      >Last Contact</label
+    >
+    <input
+      type="date"
+      class="form-control is-invalid"
+      id="validationServerLastContact"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid date.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerTotalSales" class="form-label"
+      >Total Sales</label
+    >
+    <input
+      type="number"
+      step="0.01"
+      class="form-control is-invalid"
+      id="validationServerTotalSales"
+      required
+    />
+    <div class="invalid-feedback">
+      Please provide a valid total sales amount.
     </div>
-    <div class="col-md-4">
-        <label for="validationServerUsername" class="form-label">Username</label>
-        <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend3">@</span>
-            <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-            <div id="validationServerUsernameFeedback" class="invalid-feedback">
-                Please choose a username.
-            </div>
-        </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerPec" class="form-label">PEC</label>
+    <input
+      type="email"
+      class="form-control is-invalid"
+      id="validationServerPec"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid PEC.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerPhoneNumber" class="form-label"
+      >Phone Number</label
+    >
+    <input
+      type="tel"
+      class="form-control is-invalid"
+      id="validationServerPhoneNumber"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid phone number.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerContactEmail" class="form-label"
+      >Contact Email</label
+    >
+    <input
+      type="email"
+      class="form-control is-invalid"
+      id="validationServerContactEmail"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid contact email.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerContactName" class="form-label"
+      >Contact Name</label
+    >
+    <input
+      type="text"
+      class="form-control is-invalid"
+      id="validationServerContactName"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid contact name.</div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServerContactSurname" class="form-label"
+      >Contact Surname</label
+    >
+    <input
+      type="text"
+      class="form-control is-invalid"
+      id="validationServerContactSurname"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid contact surname.</div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationServerContactPhone" class="form-label"
+      >Contact Phone</label
+    >
+    <input
+      type="tel"
+      class="form-control is-invalid"
+      id="validationServerContactPhone"
+      required
+    />
+    <div class="invalid-feedback">
+      Please provide a valid contact phone number.
     </div>
-    <div class="col-md-6">
-        <label for="validationServer03" class="form-label">City</label>
-        <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
-        <div id="validationServer03Feedback" class="invalid-feedback">
-            Please provide a valid city.
-        </div>
-    </div>
-    <div class="col-md-3">
-        <label for="validationServer05" class="form-label">Zip</label>
-        <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
-        <div id="validationServer05Feedback" class="invalid-feedback">
-            Please provide a valid zip.
-        </div>
-    </div>
-    <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
-            <label class="form-check-label" for="invalidCheck3">
-                Agree to terms and conditions
-            </label>
-            <div id="invalidCheck3Feedback" class="invalid-feedback">
-                You must agree before submitting.
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerSocietyName" class="form-label">Society Name</label>
-        <input type="text" class="form-control is-invalid" id="validationServerSocietyName" required>
-        <div class="invalid-feedback">
-            Please provide a valid society name.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerClientType" class="form-label">Client Type</label>
-        <select class="form-select is-invalid" id="validationServerClientType" aria-describedby="validationServerClientTypeFeedback" required>
-            <option selected disabled value="">Choose...</option>
-            <option value="PA">PA</option>
-            <option value="SA">SA</option>
-            <option value="SPA">SPA</option>
-            <option value="SRL">SRL</option>
-        </select>
-        <div id="validationServerClientTypeFeedback" class="invalid-feedback">
-            Please select a valid client type.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerVat" class="form-label">VAT</label>
-        <input type="text" class="form-control is-invalid" id="validationServerVat" required>
-        <div class="invalid-feedback">
-            Please provide a valid VAT number.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerEmail" class="form-label">Email</label>
-        <input type="email" class="form-control is-invalid" id="validationServerEmail" required>
-        <div class="invalid-feedback">
-            Please provide a valid email.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerAddDate" class="form-label">Add Date</label>
-        <input type="date" class="form-control is-invalid" id="validationServerAddDate" required>
-        <div class="invalid-feedback">
-            Please provide a valid date.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerLastContact" class="form-label">Last Contact</label>
-        <input type="date" class="form-control is-invalid" id="validationServerLastContact" required>
-        <div class="invalid-feedback">
-            Please provide a valid date.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerTotalSales" class="form-label">Total Sales</label>
-        <input type="number" step="0.01" class="form-control is-invalid" id="validationServerTotalSales" required>
-        <div class="invalid-feedback">
-            Please provide a valid total sales amount.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerPec" class="form-label">PEC</label>
-        <input type="email" class="form-control is-invalid" id="validationServerPec" required>
-        <div class="invalid-feedback">
-            Please provide a valid PEC.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerPhoneNumber" class="form-label">Phone Number</label>
-        <input type="tel" class="form-control is-invalid" id="validationServerPhoneNumber" required>
-        <div class="invalid-feedback">
-            Please provide a valid phone number.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerContactEmail" class="form-label">Contact Email</label>
-        <input type="email" class="form-control is-invalid" id="validationServerContactEmail" required>
-        <div class="invalid-feedback">
-            Please provide a valid contact email.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerContactName" class="form-label">Contact Name</label>
-        <input type="text" class="form-control is-invalid" id="validationServerContactName" required>
-        <div class="invalid-feedback">
-            Please provide a valid contact name.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerContactSurname" class="form-label">Contact Surname</label>
-        <input type="text" class="form-control is-invalid" id="validationServerContactSurname" required>
-        <div class="invalid-feedback">
-            Please provide a valid contact surname.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerContactPhone" class="form-label">Contact Phone</label>
-        <input type="tel" class="form-control is-invalid" id="validationServerContactPhone" required>
-        <div class="invalid-feedback">
-            Please provide a valid contact phone number.
-        </div>
-    </div>
-    <div class="col-md-6">
-        <label for="validationServerSocietyLogo" class="form-label">Society Logo</label>
-        <input type="file" class="form-control is-invalid" id="validationServerSocietyLogo" required>
-        <div class="invalid-feedback">
-            Please provide a valid logo.
-        </div>
-    </div>
-    <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationServerSocietyLogo" class="form-label"
+      >Society Logo</label
+    >
+    <input
+      type="file"
+      class="form-control is-invalid"
+      id="validationServerSocietyLogo"
+      required
+    />
+    <div class="invalid-feedback">Please provide a valid logo.</div>
+  </div>
+  <div class="col-12">
+    <button id="btnSubmit" class="btn btn-primary rounded-5" type="submit">
+      Submit form
+    </button>
+  </div>
 </form>
