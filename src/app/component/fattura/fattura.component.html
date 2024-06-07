@@ -1,0 +1,21 @@
+
+<div class="container">
+    <form #inviaFatturaForm="ngForm"  (ngSubmit)="inviaFattura(inviaFatturaForm)">
+        <div class="form-group">
+            <label for="date" class="form-label">Data Fattura</label>
+            <input type="date" name="date" id="date" required class="form-control" ngModel />
+            <label for="total" class="form-label">Importo della fattura</label>
+            <input type="number" name="total" id="total" required class="form-control" ngModel />
+            <label for="turnoverCode" class="form-label">Numero fattura</label>
+            <input type="number" name="turnoverCode" id="turnoverCode" required class="form-control" ngModel />
+            
+      <label for="turnoverState" class="form-label">Stato</label>
+      <select name="turnoverState" id="turnoverState" required class="form-control" ngModel>
+        <option value="PAYED">PAYED</option>
+        <option value="PENDING">PENDING</option>
+        <option value="CANCELED">CANCELED</option>
+      </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Accedi</button>
+    </form>
+  </div>
